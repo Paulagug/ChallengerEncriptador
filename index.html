@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+  
+    <title>Encriptador de texto</title>
+</head>
+<body>
+  
+    <header class="header">
+      <img class="logo" src="imagenes/Logo.png" alt="Logo de Alura">
+    </header>
+    <main>
+        <div class="principal">
+            <textarea class="input-text"  placeholder="Ingrese el texto aquí" onkeypress="return ((event.charCode >= 97 && event.charCode <= 122)||(event.charCode==32)) "></textarea>
+            <div class="form__sugerencia">
+              <span class="form__icon"><img src="imagenes/Vector.png"></span>
+              <p class="form__parrafo">Solo letras minúsculas y sin acentos</p>
+            </div>
+
+            <div class="botones">
+                <button class="encriptar" onclick="btnEncriptar()">Encriptar</button>
+                <button  class="desencriptar" onclick="btnDesEncriptar()">Desencriptar</button>
+
+            </div>
+        </div>
+
+        <div class="cuerpo-texto">
+            <div class="mensaje">
+              <img src="imagenes/Muñeco.png" id = "imagen" alt="">
+              <p id="mostrarTexto">Ningun mensaje fue encontrado<br>Ingrese el mensaje que desea encriptar o desencriptar</p>
+          </div>
+            <button class="copiar" onclick="copiar()">Copiar</button>
+        </div>
+      </main>
+      <footer class="footer">
+        <div>
+        <p class="copyright">Hecho por Paula Gugli &copy; 2022</p>
+        </div>
+      </footer>
+    <script src="script.js"></script>
+</body>
+</html>
